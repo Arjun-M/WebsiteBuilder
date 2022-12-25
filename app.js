@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.use((req, res, next) => {
+  res.render('404' ,{})
+})
+
 app.listen( process.env.PORT || 8080 , () => {
   console.log(`Example app listening on port ${port}`)
 })
